@@ -981,7 +981,9 @@ margin-bottom: 20px;
     border-radius: 10px;
    
 }
-
+.error {
+    border: 1px solid red !important;
+}
 .contact-form {
     margin-top: 20px;
 }
