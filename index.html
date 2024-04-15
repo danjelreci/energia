@@ -7,6 +7,7 @@
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
        <link rel="stylesheet" href="style11.css">
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
    
       <title>Energia</title>
@@ -340,46 +341,46 @@
                 <h3 class="fold-down-heading">Request A Quote</h3>
                 <p>We take  great pride in everything that we do ,control over products allows <br>
                     us to ensure our customers receive the best quality service.</p>
-                <form class="contact-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <h4>Who will be install system?</h4>
-                            <input type="text" placeholder="Local contractor">
+                    <form class="contact-form" onsubmit="return validateForm()">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <h4>Who will install the system?</h4>
+                                <input type="text" placeholder="Local contractor" oninput="toggleError(this)">
+                            </div>
+                            <div class="form-group">
+                                <h4>System completed by?</h4>
+                                <input type="text" placeholder="3,6 months" oninput="toggleError(this)">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <h4>System completed by?</h4>
-                            <input type="text" placeholder="3,6 months">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <h4>Monthly electric usage in KWh?</h4>
+                                <input type="tel" placeholder="1254 KWh" oninput="toggleError(this)">
+                            </div>
+                            <div class="form-group">
+                                <h4>Solar system type?</h4>
+                                <input type="text" placeholder="OffGrid" oninput="toggleError(this)">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <h4>Monthly electric usage in KWh?</h4>
-                            <input type="tel" placeholder="1254 KWh">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <h4>Solar panels place?</h4>
+                                <input type="text" placeholder="Huge farm" oninput="toggleError(this)">
+                            </div>
+                            <div class="form-group">
+                                <h4>Materials on your roof?</h4>
+                                <input type="text" placeholder="Comp shingle" oninput="toggleError(this)">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <h4>Solar system type?</h4>
-                            <input type="text" placeholder="OffGrid">
+                        <div class="form-row2">
+                            <h4>Priority</h4>
+                            <div class="radio-buttons">
+                                <label><input type="radio" name="priority" value="low"> All</label>
+                                <label><input type="radio" name="priority" value="medium"> Email</label>
+                                <label><input type="radio" name="priority" value="high"> Phone</label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <h4>Solar panels place?</h4>
-                            <input type="text" placeholder="Huge farm">
-                        </div>
-                        <div class="form-group">
-                            <h4>Materials on your roof?</h4>
-                            <input type="text" placeholder="Comp shingle">
-                        </div>
-                    </div>
-                    <div class="form-row2">
-                        <h4>Priority</h4>
-                        <div class="radio-buttons">
-                            <label><input type="radio" name="priority" value="low"> All</label>
-                            <label><input type="radio" name="priority" value="medium"> Email</label>
-                            <label><input type="radio" name="priority" value="high"> Phone</label>
-                        </div>
-                    </div>
-                    <a href="#"><button class="button55" type="submit" onclick="showSuccessMessage()">Submit Request <span class="arrow">&rarr;</span></button></a>
+                <a href="#">    <button onclick="showSuccessMessage()" class="button55" type="submit" >Submit Request <span class="arrow">&rarr;</span></button></a>
 
 
 
@@ -604,8 +605,10 @@
     
     
     <button id="scrollTopButton" onclick="scrollToTop()">↑</button>
+    
     </footer>
      <!-- Fund Footer -->
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script>
         function showPopup(popupId) {
     var modal = document.getElementById(popupId);
@@ -664,15 +667,47 @@ function toggleMenu() {
             lastItem.innerHTML += ` > ${subitem}`;
         }
     }
+    function validateForm() {
+        var inputs = document.querySelectorAll('.contact-form input[type="text"], .contact-form input[type="tel"]');
+        var isValid = true;
+
+        inputs.forEach(function(input) {
+            if (input.value.trim() === '') {
+                isValid = false;
+                input.classList.add('error');
+            } else {
+                input.classList.remove('error');
+            }
+        });
+
+        if (!isValid) {
+            alert('Please fill in all the required fields.');
+        }
+
+        return isValid;
+    }
+
     function showSuccessMessage() {
-    Swal.fire({
-        icon: 'success',
-        title: 'Success!',
-        text: 'Request submitted successfully!',
-        showConfirmButton: false,
-        timer: 2000 // Close the message after 2 seconds
-    });
-}
+        if (validateForm()) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Success!',
+                text: 'Request submitted successfully!',
+                showConfirmButton: false,
+                timer: 2000 // Close the message after 2 seconds
+            });
+        } else {
+            event.preventDefault();
+        }
+    }
+
+    function toggleError(input) {
+        if (input.value.trim() === '') {
+            input.classList.add('error');
+        } else {
+            input.classList.remove('error');
+        }
+    }
 
 // Function to check if an element is in the viewport
 function isInViewport(element) {
