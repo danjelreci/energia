@@ -1,0 +1,1324 @@
+ /*--------------body----------*/
+ 
+ html {
+    scroll-behavior: smooth;
+}
+ body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+}
+/*---------------end  of body-------------*/
+/*---------------info section------------*/
+
+.info-section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 41);
+    color: rgb(0, 163, 0);
+}
+
+.info-section .icon {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+    margin-left: 20px;
+    color: rgb(0, 163, 0);
+    text-decoration: none;
+}
+
+.icon-menu {
+    margin-left: auto;
+    color: rgb(0, 110, 0);
+}
+/*---------------end of info section------------*/
+
+/*---------------navbar------------*/
+
+
+.navbar {
+    position: relative;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: auto;
+}
+.menu-icon {
+    display: none; /* Hide menu icon by default */
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+.logo22 {
+   
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-right: 30px;
+    margin-left: 30px;
+    position: relative;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links li .submenu  {
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    overflow: hidden;
+    /* Hide overflow to avoid content visible before animation */
+    animation: foldDown 0.3s ease forwards;
+    /* Add animation */
+    width: 200px;
+    /* Adjust width as needed */
+}
+.nav-links li.active a {
+    color: green; /* Change text color to green */
+}
+
+@keyframes foldDown {
+    0% {
+        transform-origin: top;
+        transform: scaleY(0);
+    }
+    100% {
+        transform-origin: top;
+        transform: scaleY(1);
+    }
+}
+
+.nav-links li:hover .submenu {
+    display: block;
+}
+
+.nav-link.active {
+    color: green; /* Change text color to green */
+}
+
+.nav-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Initial width */
+    height: 2px; /* Height of the line */
+    background-color: green; /* Color of the line */
+    transition: width 0.3s ease; /* Add transition effect for smooth animation */
+}
+
+.right22 {
+    display: flex;
+    align-items: center;
+}
+
+.divider22 {
+    width: 1px;
+    height: 60px;
+    background-color: #ccc;
+    margin: 0 15px;
+}
+
+
+.search-shop {
+    display: flex;
+    align-items: center;
+}
+
+.icon1 {
+    width: 20px;
+    height: auto;
+    margin-right: 300px;
+    margin-left: 20px;
+}
+
+.icon2 {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.btn22 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    background-color: rgb(61, 161, 86);
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.btn22 span {
+    margin-left: 5px;
+}
+/*---------------end of navbar------------*/
+
+
+
+    /*--------------banner----------*/
+    .banner {
+        position: relative;
+        width: 100%;
+        height: 700px;
+        /* Adjust height as needed */
+        overflow: hidden;
+    }
+
+    .banner img {
+        width: 100%;
+        height: 700px;
+        object-fit: cover;
+        /* Ensure the image covers the entire container */
+    }
+
+    .banner-text {
+        position: absolute;
+        top: 10%;
+        left: 30%;
+        
+        text-align: left;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 80px;
+    }
+    .heading{
+        position: absolute;
+        top: 40%;
+        left: 38%;
+        
+        text-align: left;
+        color: white;
+        font-size: 80px;
+    }
+
+    
+    .fold-down-heading {
+        font-size: 100px; /* Adjust font size */
+        padding: 50px; /* Add padding for spacing */
+        color: transparent; /* Transparent text */
+        
+        position: relative;
+        z-index: 0;
+    }
+    
+    .fold-down-heading::before {
+        content: "Projects"; /* Text content */
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        z-index: -1;
+        font-size: 120px; /* Adjust font size */
+        color: rgb(255, 255, 255,0.2); /* Text color */
+    
+    }
+    
+    
+    
+    
+    
+    .banner {
+        background-color: #fff; /* Set the background color of the banner */
+    }
+
+
+    /*---------------end of banner----------*/
+    /*---------------breadcrumb--------------*/
+    .breadcrumb {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        
+        
+        font-family: Arial, sans-serif;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Add a solid line underneath */
+        padding: 20px;
+    }
+
+    .breadcrumb .home-link {
+        text-decoration: none;
+        color: #333; /* Change text color */
+        
+        margin-left: 30px;
+        margin-right: 10px; /* Add margin between Home link and other links */
+        font-size: 18px; /* Increase font size */
+    }
+
+    .breadcrumb ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+    }
+
+    .breadcrumb li {
+        margin-right: 10px;
+        position: relative; /* Add position relative to position the underline */
+    }
+
+    .breadcrumb li:not(:last-child):after {
+        content: '';
+        position: absolute; /* Position the underline */
+        bottom: -2px; /* Adjust the position of the underline */
+        left: 0;
+        width: 100%; /* Make the underline span the entire width */
+        height: 2px; /* Define the height of the underline */
+        background-color: #00a300; /* Choose the color of the underline */
+        opacity: 0; /* Initially make the underline invisible */
+        transition: opacity 0.3s ease; /* Add transition effect for smooth appearance */
+    }
+
+    .breadcrumb li:hover:not(:last-child):after {
+        opacity: 1; /* Make the underline visible on hover */
+    }
+
+    #breadcrumb-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #breadcrumb-list li {
+        display: inline;
+    }
+
+    #breadcrumb-list li:not(:last-child):after {
+        content: '>'; /* Add arrow symbol */
+        margin: 0 5px;
+    }
+
+    #breadcrumb-list a {
+        text-decoration: none;
+        color: #333; /* Change text color */
+        font-weight: bold; /* Add bold font weight */
+        transition: color 0.3s ease; /* Add transition effect for smooth color change */
+    }
+
+    #breadcrumb-list a:hover {
+        color: #00a300; /* Change text color on hover */
+    }
+
+    .close-btn {
+    
+        display: none; /* Hide the close button by default */
+    }
+
+
+    /*---------------end of breadcrumb---------*/ 
+
+/**************  prova 1**********/
+.latest-projects {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+    color: rgb(0, 163, 0);
+}
+.cbutton{
+    text-decoration: none;
+}
+.latest-projects .head1{
+    font-size: 48px;
+}
+.latest-projects2 .head3{
+    font-size: 48px;
+}
+.box-container {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.box {
+    color: #ffffff;
+    text-align: left;
+    margin-left: 10px;
+    width: calc(18% - 10px);
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgb(201, 201, 201);
+    padding: 20px;
+    height: 200px;
+    margin-bottom: 20px;
+    overflow: hidden; /* Hide overflowing background */
+    position: relative; /* Position for pseudo-element */
+}
+
+.box h2,
+.box p,
+.box i {
+    position: relative; /* Ensure z-index works */
+    z-index: 2; /* Place them above the pseudo-element */
+    opacity: 1; /* Always visible */
+}
+
+.box h2 {
+    margin-top: 90px;
+    margin-bottom: 15px;
+}
+
+.box p {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    margin-top: 5px;
+}
+
+.box i {
+    color: #ffffff;
+    margin-right: 10px;
+    font-size: 25px; /* Adjust icon size as needed */
+    margin-left: 5px; /* Add space between client name and icon */
+}
+
+.box:before {
+    content: ""; /* Create pseudo-element */
+    position: absolute; /* Position relative to the box */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* Set a lower z-index */
+    opacity: 1; /* Initially hide */
+    transition: opacity 0.5s ease-in-out; /* Transition for opacity */
+}
+
+
+
+.box:nth-child(1):before {
+    background-image: url('images/Klea1.jpeg');
+}
+.box:nth-child(2):before {
+    background-image: url('images/project4.png');
+}
+.box:nth-child(3):before {
+    background-image: url('images/hydro.jpg');
+}
+.box:nth-child(4):before {
+    background-image: url('images/wind1.webp');
+}
+.box:nth-child(5):before {
+    background-image: url('images/Klea1.jpeg');
+}
+.box:nth-child(6):before {
+    background-image: url('images/man3.avif');
+}
+.box:nth-child(7):before {
+    background-image: url('images/hydro.jpg');
+}
+.box:nth-child(8):before {
+    background-image: url('images/wind1.webp');
+}
+
+/****************end of service***************/
+/*********comments***************/
+
+.latest-projects2 {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+    color: rgb(0, 163, 0);
+}
+.box-container22 {
+   text-align: left;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.paragraphs-container {
+   line-height: 1.5em;
+    width: calc(25% - 10px);
+    display: flex;
+    margin-left: 80px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    border-bottom: 1px solid rgb(0, 0, 0,0.3) ;
+}
+
+.paragraphs-container p {
+    color: rgb(0, 0, 0,0.5);
+    flex: 1;
+    padding: 0 10px;
+    
+}
+.paragraphs-container {
+    display: flex;
+    flex-direction: column;
+
+}
+.employee-profile {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.employee-profile img {
+    width: 80px; /* Adjust as needed */
+    height: 80px; /* Ensure the same value for width and height */
+    margin-right: 20px; /* Add spacing between the photo and the text */
+    border-radius: 50%; /* Make the image circular */
+}
+
+
+.employee-profile .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.employee-profile h2 {
+    margin: 0;
+}
+
+.employee-profile p {
+    margin-top: 5px; /* Add spacing between name/surname and position */
+}
+
+.fill-free {
+    
+    background-color: green;
+    font-size: 16px;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+ .contact-us {
+    font-size: 18px;
+    color: green;
+}
+.contact-us1 {
+    font-size: 18px;
+    color: green;
+}
+
+.contact-us:hover{
+    background-color: green;
+    font-size: 16px;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+.fa-arrow-left {
+    color: green;
+    margin-left: 10px;
+  }
+  .fa-arrow-right {
+    color: green;
+    margin-right: 10px;
+  }
+
+/***********end of comment********/
+
+/*******************footer******************/
+footer {
+    background-color: rgb(0,0,41);
+    padding: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    position: relative;
+}
+
+.column {
+    flex: 1;
+    line-height: 2;
+    margin-left: 150px;
+    color: rgb(205, 200, 237);
+}
+.column h3 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.column ul {
+    
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.column a{
+    text-decoration: none;
+    color:rgb(205, 200, 237);
+}
+.column ul li {
+    margin-bottom: 5px;
+}
+.footer-section {
+    display: flex;
+}
+.phone{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+.green-text {
+    color: green;
+}
+.social-links {
+    margin-top: 20px; /* Add some space between the footer content and social links */
+  position: absolute;
+  bottom: 5%;
+    display: flex; /* Make the social links container a flexbox */
+}
+.social-links p {
+    margin-bottom: 5px;
+    margin-right: 10px; /* Add space between the icons */
+    display: flex; /* Align the icons horizontally */
+    align-items: center; /* Align items vertically */
+}
+.copyright {
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    bottom: 3%;
+    left :40%;
+}
+
+#scrollTopButton {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 160px 35px; /* Padding inside the button */
+    cursor: pointer; 
+    font-size: 16px; 
+    position: absolute; 
+    bottom: 0px; 
+    right: 0px; 
+}
+
+
+#scrollTopButton:hover {
+    background-color: #45a049; 
+}
+
+.additional-content{
+    
+    margin-right:30px;
+}
+.pinlocation{
+    text-decoration: none;
+    color: white;
+    
+}
+.close-btn {
+   
+    display: none; /* Hide the close button by default */
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    color: rgb(0, 0, 0,0.6);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close {
+    color: #727272;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modalBackdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+
+    /* Responsivitetesh */
+    @media screen and (max-width: 1450px){
+    
+        .nav-links li {
+            margin-right: 23px;
+            margin-left: 21px;
+        
+        }
+        .banner-text {
+            position: absolute;
+            top: 18%;
+            left: 25%;
+            text-align: left;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 80px;
+        }
+    
+        .copyright {
+        
+            left: 32%;
+        }
+        .contact {
+            margin-left: 11px;
+            padding: 20px;
+        }
+        .left-side {
+            width: 35%;
+            margin-left: 267px;
+           
+        }
+        .right-side {
+            margin-left: 62px;
+            
+            width: 40%;
+        }
+
+        .footer-section {
+            width: 80%;
+            display: flex;
+        }
+        .column {
+            flex: 1;
+            line-height: 2;
+            margin-left: 63px;
+            color: rgb(205, 200, 237);
+        }
+        .next-section-container {
+           
+            margin: 52px auto;
+        }
+    }
+
+
+
+
+    @media screen and (max-width: 1030px){
+        .info-section .icon {
+          
+            margin-right: 10px;
+            margin-left: 8px;
+           
+        }
+        .divider22:nth-of-type(1) {
+            width: 0;
+            height: 10px;
+        }
+        .navbar {
+            padding: 20px 2px;
+        }
+        .nav-links li {
+    font-size: 14px;
+    margin-right: 14px;
+    margin-left: -2px;
+}
+        
+        .search-shop {
+            margin-right: 3px;
+        }
+        .banner-text {
+            font-size: 70px;
+            position: absolute;
+            top: 22%;
+            left: 19%;
+            color: rgb(255, 255, 255, 0.8);
+        }
+        .heading {
+            position: absolute;
+            top: 50%;
+            left: 39%;
+            text-align: left;
+            color: white;
+            font-size: 58px;
+        }
+        .left-side {
+            width: 30%;
+            margin-left: 180px;
+            margin-bottom: 50px;
+        }
+        .right-side {
+            display: flex;
+            margin-left: 80px;
+            margin-top: 60px;
+            height: 200px;
+            width: 40%;
+        }
+        .box {
+           
+            width: calc(28% - 10px);
+           
+        }
+        .paragraphs-container {
+           
+            width: calc(25% - 10px);
+            
+            margin-left: 59px;
+            
+        }
+        
+        footer {
+            padding: 9px;
+
+        }
+        .footer-section {
+            width: 68%;
+            display: flex;
+        }
+        .column {
+            flex: 1;
+            line-height: 2;
+            margin-left: 70px;
+            color: rgb(205, 200, 237);
+        }
+        
+        #scrollTopButton {
+        
+            padding: 80px 25px; /* Padding inside the button */
+        
+        }
+        .copyright {
+            font-size: 12px;
+            bottom: 0%;
+            left: 2%;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+    body{
+        width: 100%
+    }
+    
+    .navbar {
+        position: relative;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0px;
+
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+        .menu-icon {
+            position: absolute;
+            display: block;
+            top: 30%;
+            left: 4%;
+        }
+
+        .nav-links {
+            background-color: #fff;
+        
+            align-items: center;
+            position: absolute;
+            top: 69px;
+            left: 0px;
+            height: 130%;
+            width: 100%;
+            z-index: 1000;
+            display: none;
+        }
+
+    .nav-links.active {
+        display: flex; /* Show the menu when active */
+    }
+
+
+    .nav-links li {
+        margin-right: 30px;
+        margin-left:0px;
+        position: relative;
+    }
+
+
+    .banner-text {
+        font-size: 50px;
+        position: absolute;
+        top: 35%;
+        left: 24%;
+        color: rgb(255, 255, 255, 0.8);
+    }
+    .heading {
+        position: absolute;
+        top: 55%;
+        left: 38%;
+        text-align: left;
+        color: white;
+        font-size: 48px;
+    }
+    .box {
+        width: calc(43% - 10px);         
+    }
+    .paragraphs-container {
+        width: calc(82% - 10px);
+    }
+    .box { 
+    width: calc(40% - 10px);
+}
+    .btn22 {
+    right: 0%;
+    padding: 11px 5px;
+    }
+    .divider22:nth-of-type(1) {
+    width: 0;
+    height: 10px;
+    }
+    .logo22 {
+
+    margin-right: 0px;
+    }
+    .icon1 {
+    position: absolute;
+    left: 59%;
+    top: 40%;
+    width: 20px;
+    height: auto;
+    margin-right: 300px;
+    margin-left: 20px;
+    }
+    .icon2 {
+    position: absolute;
+    left: 55%;
+    top:40%;
+    width: 20px;
+    height: auto;
+    margin-right: 0px; 
+    }
+   
+    .column {
+        flex: 1;
+        line-height: 2;
+        margin-left: 50px;
+        color: rgb(205, 200, 237);
+    }
+    .column {
+        line-height: 2;
+        margin-left: 52px;
+    }
+    .copyright {
+       
+        bottom: 3%;
+        left: 5%;
+    }
+
+        
+    }
+
+    @media screen and (max-width: 500px) {
+        body {
+      
+            width: 100%;
+        }
+        .close-btn {
+            position: relative;
+            top: -73%;
+            left: -44%;
+            display: block;
+        }
+        .navbar {
+            position: relative;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 0px;
+    
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            height: auto;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+     
+            .menu-icon {
+                position: absolute;
+                display: block;
+                top: 27%;
+                left: 4%;
+            }
+        
+        .nav-links {
+            background-color: #fff; /* White background color for small screens */
+            flex-direction: column; /* Change flex direction to column */
+            align-items: center; /* Center items vertically */
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 300%; /* Set height to cover the entire screen */
+            width: 100%;
+            z-index: 1000;
+            display: none; /* Hide the menu by default */
+        }
+    
+        .nav-links.active {
+            display: flex; /* Show the menu when active */
+        }
+        
+        
+        .nav-links li {
+            font-size: 15px;
+            margin-bottom: 8px;
+            margin-right: 30px;
+            margin-left: 0px;
+            position: relative;
+        }
+        .divider22:nth-of-type(1) {
+            width: 0;
+            height: 10px;
+        }
+        .logo22 {
+            
+          
+            width: 142px;
+            height: auto;
+            
+        }
+        .icon1 {
+            position: absolute;
+            left: 44%;
+            top: 40%;
+            width: 20px;
+            height: auto;
+            margin-right: 300px;
+            margin-left: 20px;
+        }
+       
+            .icon2 {
+                left: 35%;
+                top: 40%;
+                position: absolute;
+                width: 20px;
+                height: auto;
+                margin-right: 0px;
+            }
+            .info-section .icon {
+                width: 20px;
+                height: auto;
+                margin-right: 10px;
+                margin-left: 4px;
+                color: rgb(0, 163, 0);
+                text-decoration: none;
+            }
+        
+        .info-section {
+             
+            flex-direction: column;
+        }
+        .btn22 {
+         position: absolute;
+             
+         top: 0%;
+         right: 0%;
+         padding: 8px 7px;
+            display: flex;
+            align-items: center;
+        }
+        .banner-text {
+            font-size: 24px;
+            position: absolute;
+            top: 45%;
+            left: 19%;
+            color: rgb(255, 255, 255, 0.8);
+        }
+        .heading {
+            position: absolute;
+            top: 55%;
+            left: 34%;
+            text-align: left;
+            color: white;
+            font-size: 28px;
+        }
+        .breadcrumb {
+            flex-direction: row;
+        }
+        .breadcrumb .home-link {
+            text-decoration: none;
+            color: #333;
+            margin-left: 1px;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        .box {
+            
+            width: calc(76% - 10px);
+            
+        }
+        .box-container22 {
+           
+            flex-direction: column;
+        }
+        .paragraphs-container {
+           
+            width: calc(80% - 10px);
+            display: flex;
+            margin-left: 53px;
+            
+        }
+        footer {
+            padding: 3px;
+            flex-direction: column;
+        }
+        .footer-section {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        .column {
+            line-height: 1.5;
+            margin-left: 0px;
+        }
+        .column h3 {
+            margin-bottom: 10px;
+        }
+        .social-links {
+            flex-direction: column;
+            
+        }
+        .additional-content{
+            margin-bottom: 150px;
+        }
+        #scrollTopButton {
+            padding: 82px 35px;
+        }
+        .copyright{
+        bottom: 1%;
+            margin-right: 90px;
+        }
+    
+        
+    }
+
+    @media screen and (max-width: 340px) {
+        body {
+      
+            width: 100%;
+        }
+        .close-btn {
+            position: relative;
+            top: -73%;
+            left: -44%;
+            display: block;
+        }
+        .navbar {
+            position: relative;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 0px;
+    
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            height: auto;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+     
+            .menu-icon {
+                position: absolute;
+                display: block;
+                top: 27%;
+                left: 4%;
+            }
+        
+        .nav-links {
+            background-color: #fff; /* White background color for small screens */
+            flex-direction: column; /* Change flex direction to column */
+            align-items: center; /* Center items vertically */
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 300%; /* Set height to cover the entire screen */
+            width: 100%;
+            z-index: 1000;
+            display: none; /* Hide the menu by default */
+        }
+    
+        .nav-links.active {
+            display: flex; /* Show the menu when active */
+        }
+        
+        
+        .nav-links li {
+            font-size: 15px;
+            margin-bottom: 8px;
+            margin-right: 30px;
+            margin-left: 0px;
+            position: relative;
+        }
+        .divider22:nth-of-type(1) {
+            width: 0;
+            height: 10px;
+        }
+        .logo22 {
+            
+          
+            width: 142px;
+            height: auto;
+            
+        }
+        .icon1 {
+            position: absolute;
+            left: 23%;
+            top: 38%;
+            width: 20px;
+            height: auto;
+            margin-right: 300px;
+            margin-left: 20px;
+        }
+       
+            .icon2 {
+                left: 18%;
+                top: 38%;
+                position: absolute;
+                width: 20px;
+                height: auto;
+                margin-right: 0px;
+            }
+        
+        .info-section {
+             
+            flex-direction: column;
+        }
+        .btn22 {
+         position: absolute;
+             
+         top: 0%;
+         right: 0%;
+         padding: 0px 2px;
+            display: flex;
+            align-items: center;
+        }
+        .banner-text {
+            font-size: 24px;
+            position: absolute;
+            top: 45%;
+            left: 19%;
+            color: rgb(255, 255, 255, 0.8);
+        }
+        .heading {
+            position: absolute;
+            top: 55%;
+            left: 34%;
+            text-align: left;
+            color: white;
+            font-size: 28px;
+        }
+        .breadcrumb {
+            flex-direction: row;
+        }
+        .breadcrumb .home-link {
+            text-decoration: none;
+            color: #333;
+            margin-left: 0px;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        .latest-projects2 .head3 {
+            font-size: 33px;
+        }
+        .box {
+            
+            width: calc(76% - 10px);
+            
+        }
+        .box-container22 {
+           
+            flex-direction: column;
+        }
+        .paragraphs-container {
+            width: calc(80% - 10px);
+            display: flex;
+            margin-left: 36px;
+        }
+        footer {
+            padding: 3px;
+            flex-direction: column;
+        }
+        .footer-section {
+            width: 77%;
+            display: flex;
+            flex-direction: column;
+        }
+        .column {
+            line-height: 1.5;
+            margin-left: 0px;
+        }
+        .column h3 {
+            margin-bottom: 10px;
+        }
+        .social-links {
+            flex-direction: column;
+            
+        }
+        .additional-content{
+            margin-bottom: 150px;
+        }
+        #scrollTopButton {
+            padding: 82px 35px;
+        }
+        .copyright{
+        
+            margin-right: 90px;
+        }
+    
+        
+    }
+
+
+

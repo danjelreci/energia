@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="stylesheet" href="newstyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
+    <title>Energia</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <!---------------info section------------>
+    <div class="info-section">
+        <i class="fas fa-phone icon"></i>
+        <span>+2 010612 457</span>
+        <i class="fas fa-envelope icon"></i>
+        <span>Energia@7oroof.com</span>
+        <i class="far fa-clock icon"></i>
+        <span>Mon-Fri 8am-7pm</span>
+        <div class="icon-menu">
+            <a href="#"><i class="fab fa-facebook icon"></i></a>
+            <a href="#"><i class="fab fa-linkedin icon"></i></a>
+            <a href="#"><i class="fab fa-youtube icon"></i></a>
+            <a href="news1.html" class="icon">News & Media</a>
+            <a href="contactpage.html" class="icon">Careers</a>
+            <a href="aboutus.html#question" class="icon" >FAQ</a>
+            <a href="#" class="icon">
+                <img src="images/flag.png" width="20px" height="20px" alt="English Flag"> <!-- Replace 'path/to/english-flag.png' with the actual path to your English flag image -->
+                English
+            </a>
+        </div>
+    </div>
+<!------------end of info section------------>
+
+<!---------------navibar------------>
+<div class="navbar">
+  <div class="left33">
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+        <img src="images/1.png" alt="Logo22" class="logo22"  >
+            
+            <div class="divider22"></div>
+            <li><a href="navbar2.html" class="nav-link" onclick="updateBreadcrumb('Home')">Home&nbsp;</a>
+                
+            </li>
+            <li><a href="#" class="nav-link" onclick="updateBreadcrumb('Company')">Company</a>
+                
+                
+            </li>
+            <li><a href="services.html" class="nav-link" onclick="updateBreadcrumb('Services')">Services&nbsp;</i></a>
+                
+            </li>
+            <li><a href="projects.html" class="nav-link" onclick="updateBreadcrumb('Projects')">Projects&nbsp;</i></a>
+            
+            </li>
+
+                <li><a href="news1.html" class="nav-link" onclick="updateBreadcrumb('News')">News&nbsp;</a></li>
+          </li>
+          <li><a href="contactpage.html" cla0ss="nav-link "onclick="updateBreadcrumb('Contact Us')">Contact Us&nbsp;</i></a></li>
+          <div class="close-btn" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        </ul>
+     </div>
+    
+  <div class="right22">
+      <div class="search-shop">
+          <i class="fas fa-search icon2"></i>
+          <div class="divider22"></div>
+          <i class="fas fa-shopping-cart icon1"></i>
+          <!-- Font Awesome shopping cart icon -->
+          <a href="navbar2.html#quote" class="btn22 btn-green">Request a quote &nbsp;&nbsp;&nbsp;&nbsp;<span>&rarr;</span></a>
+
+      </div>
+  </div>
+</div>
+<!---------------end of navi bar------------>
+
+<!---------------banner------------>
+
+ 
+<div class="banner">
+    <img src="images/aboutus3.avif" alt="Banner Image">
+    <div class="banner-text">
+      <h2 class="fold-down-heading2">Recent News</h2>
+     
+    
+    </div>
+    <h2 class="heading">News    </h2>
+  </div>
+
+<!---------------end of banner----------->
+<!-- New breadcrumb navigation -->
+<div class="breadcrumb">
+    <a href="#" class="home-link">Home > News ></a>
+    <ul id="breadcrumb-list"></ul>
+</div>
+
+    <div id="news" class="recent-articles-section">
+        <h2>Recent Articles</h2>
+        
+        <div class="articles-container">
+            <p class="p55">.        .... </p>
+              <div class="article-box">
+                 <div class="article-content">
+                    <div class="article-meta">
+                        <p class="article-date">Jan 22, 2022</p>
+                        <p class="article-author">Mike Dooley</p>
+                    </div>
+                    <h2 class="article-title">Filing Solar Power Permits in
+                    2020?Consider the Following 
+                Important Factors</h2>
+                <div class="article-image-container">
+                    <img src="images/wind1.webp" alt="Article Image" class="article-image">
+        
+                </div>
+               
+                    <p class="article-description">All of these factors are important consider
+                     when permitting your solar system, and can
+                     help streamline     your process.Take time to
+                     consider these often looked aspects...</p>
+                     <span class="more-text" style="display: none;">All of these factors are important consider
+                        when permitting your solar system, and can
+                        help streamline     your process.Take time to
+                        consider these often looked aspects..</span>
+                   
+                    <button class="article-button" onclick="toggleReadMore(this)">Read More <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="article-box">
+                <div class="article-content">
+                    
+                    <div class="article-meta">
+                        <p class="article-date">Jan 25, 2022</p>
+                        <p class="article-author">Peter Alan</p>
+                    </div>
+                    <h2 class="article-title">How to Add Battery Backup to an Existing Grid Tied Solar
+                         System by Yourself!  </h2>
+                         <div class="article-image-container">
+                            <img src="images/3.jpg" alt="Article Image" class="article-image">
+                            
+                        </div>
+                       
+                    <p class="article-description">Batteries are the most expensive part of a solar system. Between appropriately-size battery bank and a battery-based inverter like the Outback Radian, you’re looking...</p>
+                    <span class="more-text" style="display: none;">All of these factors are important consider
+                        when permitting your solar system, and can
+                        help streamline     your process.Take time to
+                        consider these often looked aspects..</span>
+                        <button class="article-button" onclick="toggleReadMore(this)">Read More <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="article-box">
+                <div class="article-content">
+                    <div class="article-meta">
+                        <p class="article-date">March 28, 2024</p>
+                        <p class="article-author">Sophia Barry</p>
+                    </div>
+                    <h2   class="article-title ">Energy Department Research Will Help Eagles Coexist with Wind Energy</h2>
+                    <div class="article-image-container">
+                        <img src="images/2.jpeg" alt="Article Image" class="article-image">
+                       
+                    </div>
+                   
+                    <p class="article-description">While the renewable energy comprises a range of technologies, including wind and hydro based solutions, in the Middle East there’s no doubt that solar is king...</p>
+                    <span class="more-text" style="display: none;">
+                        All of these factors are important consider when permitting your solar system, and can help streamline your process.Take time to consider these often looked aspects...
+                    </span>
+                    <button class="article-button" onclick="toggleReadMore(this)">Read More <i class="fas fa-arrow-right"></i></button>
+    
+                </div>
+            </div>
+            <div class="article-box">
+                <div class="article-content">
+                    <div class="article-meta">
+                        <p class="article-date">Jan 22, 2022</p>
+                        <p class="article-author">Mike Dooley</p>
+                    </div>
+                    <h2 class="article-title">Filing Solar Power Permits in
+                    2020?Consider the Following 
+                Important Factors</h2>
+                <div class="article-image-container">
+                    <img src="images/wind1.webp" alt="Article Image" class="article-image">
+        
+                </div>
+                
+                    <p class="article-description">All of these factors are important consider
+                     when permitting your solar system, and can
+                     help streamline     your process.Take time to
+                     consider these often looked aspects...</p>
+                     <span class="more-text" style="display: none;">All of these factors are important consider
+                        when permitting your solar system, and can
+                        help streamline     your process.Take time to
+                        consider these often looked aspects..</span>
+                   
+                    <button class="article-button" onclick="toggleReadMore(this)">Read More <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="article-box">
+                <div class="article-content">
+                    
+                    <div class="article-meta">
+                        <p class="article-date">Jan 25, 2022</p>
+                        <p class="article-author">Peter Alan</p>
+                    </div>
+                    <h2 class="article-title">How to Add Battery Backup to an Existing Grid Tied Solar
+                         System by Yourself!  </h2>
+                         <div class="article-image-container">
+                            <img src="images/6.jpg" alt="Article Image" class="article-image">
+                            
+                        </div>
+                      
+                    <p class="article-description">Batteries are the most expensive part of a solar system. Between appropriately-size battery bank and a battery-based inverter like the Outback Radian, you’re looking...</p>
+                    <span class="more-text" style="display: none;">All of these factors are important consider
+                        when permitting your solar system, and can
+                        help streamline     your process.Take time to
+                        consider these often looked aspects..</span>
+                        <button class="article-button" onclick="toggleReadMore(this)">Read More <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="article-box">
+
+                <div class="article-content">
+                    <div class="article-meta">
+                        <p class="article-date">March 28, 2024</p>
+                        <p class="article-author">Sophia Barry</p>
+                    </div>
+                    <h2   class="article-title ">Energy Department Research Will Help Eagles Coexist with Wind Energy</h2>
+                    <div class="article-image-container">
+                        <img src="images/4.jpg" alt="Article Image" class="article-image">
+                       
+                    </div>
+                    
+                    <p class="article-description">While the renewable energy comprises a range of technologies, including wind and hydro based solutions, in the Middle East there’s no doubt that solar is king...</p>
+                    <span class="more-text" style="display: none;">
+                        All of these factors are important consider when permitting your solar system, and can help streamline your process.Take time to consider these often looked aspects...
+                    </span>
+                    <button class="article-button" onclick="toggleReadMore(this)">Read More <i class="fas fa-arrow-right"></i></button>
+    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+   
+</div>
+<footer>
+    <!--Nis Footer-->
+    <div class="footer-section">
+        <div class="column">
+            <h3>Company</h3>
+            
+            <ul>
+               <a href="aboutus.html"> <li>About us</li></a>
+                <a href="aboutus.html#staff"><li>Meet our Team</li></a>
+                <a href="news1.html"><li>News & Media</li></a>
+                <a href="projects.html"><li>Our Projects</li></a>
+                <a href="contactpage.html"><li>Contacts</li></a>
+            </ul>
+        </div>
+
+        <div class="column">
+            <h3>Services</h3>
+           
+            <ul>
+                <a href="#"> <li>Battery Materials</li></a>
+                <a href="#"><li>Solar Materials</li></a>
+                <a href="#"><li>Optical Media</li></a>
+                <a href="#"><li>Products</li></a>
+                <a href="#"><li>Trade Finance</li></a>
+              
+            </ul>
+        </div>
+        <div class="column">
+            <h3>Support</h3>
+            
+           
+            <ul>
+                <li><a href="#" onclick="showPopup('termsPopup'); event.preventDefault();">Terms & Conditions</a></li>
+                <li><a href="#" onclick="showPopup('shoppingPopup'); event.preventDefault();">Shopping Policy</a></li>
+                <li><a href="#" onclick="showPopup('deliveryPopup'); event.preventDefault();">Delivery Tips</a></li>
+                <li><a href="#" onclick="showPopup('returnsPopup'); event.preventDefault();">Returns</a></li>
+            </ul>
+            
+            
+            <div class="modal" id="termsPopup">
+                <div class="modal-content">
+                    <span class="close" onclick="closePopup('termsPopup')">&times;</span>
+                    <h2>Terms & Conditions</h2>
+                    <p>
+                        Thank you for visiting our website. By accessing or using our website, you agree to comply with and be bound by the following terms and conditions. Please read these terms carefully before using our website.
+                        <br><br>
+                        - All content provided on this website is for informational purposes only.
+                        <br>
+                        - We reserve the right to modify or terminate the website or any part of it without notice at any time.
+                        <br>
+                        - Your use of any information or materials on this website is entirely at your own risk.
+                        <br>
+                        - This website may contain links to other websites which are not under our control. We have no control over the nature, content, and availability of those sites.
+                        <br><br>
+                        For further information, please contact us.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="modal" id="shoppingPopup">
+    <div class="modal-content">
+        <span class="close" onclick="closePopup('shoppingPopup')">&times;</span>
+        <h2>Shopping Policy</h2>
+        <p>
+            Our shopping policy outlines how we handle orders, payments, shipping, and returns. Please review the following key points:
+            <br><br>
+            - Orders: All orders are subject to availability and acceptance.
+            <br>
+            - Payments: We accept various payment methods including credit/debit cards, PayPal, and bank transfers.
+            <br>
+            - Shipping: We offer shipping to most locations worldwide. Shipping costs and delivery times vary depending on the destination.
+            <br>
+            - Returns: We accept returns within 30 days of purchase. Items must be unused and in their original condition.
+            <br><br>
+            For more detailed information, please refer to our full shopping policy.
+        </p>
+    </div>
+</div>
+
+<div class="modal" id="deliveryPopup">
+    <div class="modal-content">
+        <span class="close" onclick="closePopup('deliveryPopup')">&times;</span>
+        <h2>Delivery Tips</h2>
+        <p>
+            To ensure a smooth delivery experience, please keep the following tips in mind:
+            <br><br>
+            - Provide accurate shipping information including address, contact number, and any special delivery instructions.
+            <br>
+            - Track your order using the provided tracking number for real-time updates on its status.
+            <br>
+            - Be available to receive the delivery or arrange for someone to receive it on your behalf.
+            <br>
+            - Inspect the package upon delivery and report any damage or discrepancies immediately.
+            <br><br>
+            If you have any questions or concerns about your delivery, please don't hesitate to contact us.
+        </p>
+    </div>
+</div>
+
+<div class="modal" id="returnsPopup">
+    <div class="modal-content">
+        <span class="close" onclick="closePopup('returnsPopup')">&times;</span>
+        <h2>Returns</h2>
+        <p>
+            We want you to be completely satisfied with your purchase. If for any reason you are not happy with your order, you may return it within 30 days for a refund or exchange.
+            <br><br>
+            - Returns must be unused and in the same condition as received, with all original tags and packaging intact.
+            <br>
+            - Please include a copy of your order confirmation or packing slip with your return.
+            <br>
+            - Return shipping costs are the responsibility of the customer, unless the return is due to our error or a defective product.
+            <br><br>
+            For instructions on how to initiate a return, please contact our customer service team.
+        </p>
+    </div>
+</div>
+
+        </div>
+        <div class="copyright">
+            <p>&copy; 2022 Energia,All Rights Reserved by 7croof.com.</p>
+        </div>  
+    </div>
+    <div class="additional-content">
+
+        <p class="phone">+2 010612 457</p>
+        <p class="green-text">Email: Energia@7oroof.com</p>
+       
+
+        <p >237 Beverky RDBrooklyn, New York 11226, 
+            United States</p>
+
+            <a class="pinlocation" href="https://www.google.com/maps/place/237+Beverley+Rd,+Brooklyn,+NY+11218,+USA/@40.6432034,-73.9800407,17z/data=!3m1!4b1!4m5!3m4!1s0x89c25b292893b677:0x2053f54da336acb6!8m2!3d40.6431994!4d-73.9774658?entry=ttu" target="_blank">
+                <p><i class="fa-solid fa-location-pin"></i> Get Directions</p>
+            </a>
+        <div class="social-links">
+    <p><i class="fab fa-facebook"></i>&nbsp;&nbsp;Facebook  </p>
+    <p><i class="fab fa-instagram"></i>&nbsp;&nbsp;Instagram  </p>
+    <p><i class="fab fa-twitter"></i>&nbsp;&nbsp;Twitter</p>
+
+</div>
+
+
+<button id="scrollTopButton" onclick="scrollToTop()">↑</button>
+</footer>
+ <!-- Fund Footer -->
+<script>
+     function showPopup(popupId) {
+    var modal = document.getElementById(popupId);
+    var modalBackdrop = document.getElementById('modalBackdrop');
+    modal.style.display = 'block';
+    modalBackdrop.style.display = 'block';
+}
+
+function closePopup(popupId) {
+    var modal = document.getElementById(popupId);
+    var modalBackdrop = document.getElementById('modalBackdrop');
+    modal.style.display = 'none';
+    modalBackdrop.style.display = 'none';
+}
+ function toggleReadMore(button) {
+  // Get the button's parent node, which is the container of the article content
+  var articleContent = button.parentNode;
+
+  // Get the span that contains the more text within this article content
+  var moreText = articleContent.getElementsByClassName('more-text')[0]; // Get the first element with the class 'more-text'
+  
+  if (moreText.style.display === "none" || moreText.style.display === "") {
+    moreText.style.display = "inline"; // Show the 'more-text'
+    button.innerHTML = 'Read Less <i class="fas fa-arrow-right"></i>'; // Optionally change button text to 'Read Less'
+  } else {
+    moreText.style.display = "none"; // Hide the 'more-text'
+    button.innerHTML = 'Read More <i class="fas fa-arrow-right"></i>'; // Change button text back to 'Read More'
+  }
+}
+
+function openLink() {
+    window.open("https://www.youtube.com/watch?v=GasOvLJu2vQ", "_blank");
+}
+
+
+function toggleMenu() {
+    var navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
+}
+
+  
+
+  
+
+  document.addEventListener('DOMContentLoaded', function() {
+      const navLinks = document.querySelectorAll('.nav-links li');
+      navLinks.forEach(function(navLink) {
+          navLink.addEventListener('mouseenter', function() {
+              navLinks.forEach(function(link) {
+                  link.classList.remove('active');
+              });
+              this.classList.add('active');
+          });
+      });
+  });
+
+  function updateBreadcrumb(item) {
+        const breadcrumbList = document.getElementById('breadcrumb-list');
+        breadcrumbList.innerHTML = ''; // Clear existing breadcrumb items
+        const homeItem = document.createElement('li');
+       
+        breadcrumbList.appendChild(homeItem);
+        const selectedItem = document.createElement('li');
+        selectedItem.innerHTML = `<a href="#">${item}</a>`;
+        breadcrumbList.appendChild(selectedItem);
+    }
+
+    function updateSubmenuBreadcrumb(subitem) {
+        const breadcrumbList = document.getElementById('breadcrumb-list');
+        const lastItem = breadcrumbList.lastElementChild;
+        if (lastItem) {
+            lastItem.innerHTML += ` > ${subitem}`;
+        }
+    }
+   
+
+// Function to check if an element is in the viewport
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Function to handle animations for headings and paragraphs
+function animateOnScroll() {
+  const headings = document.querySelectorAll('.fold-down-heading');
+  const paragraphs = document.querySelectorAll('.fold-down-paragraph');
+
+  headings.forEach(heading => {
+    if (isInViewport(heading)) {
+      heading.classList.add('folddownanimation');
+    } else {
+      heading.classList.remove('folddownanimation');
+    }
+  });
+
+  paragraphs.forEach(paragraph => {
+    if (isInViewport(paragraph)) {
+      paragraph.classList.add('folddownanimation');
+    } else {
+      paragraph.classList.remove('folddownanimation');
+    }
+  });
+}
+
+// Listen for scroll events and trigger animations
+window.addEventListener('scroll', animateOnScroll);
+
+// Trigger animations initially
+animateOnScroll();
+
+// JavaScript function to scroll to top
+function scrollToTop() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+    </script>
+</body>
+</html>
